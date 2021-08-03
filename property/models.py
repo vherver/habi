@@ -36,7 +36,9 @@ class StatusHistory(models.Model):
     """Model used to store every property status changes"""
 
     update_date = models.DateTimeField(auto_now_add=True)
-    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    property = models.ForeignKey(
+        Property, on_delete=models.CASCADE, related_name="status"
+    )
     status = models.ForeignKey(Status, on_delete=models.CASCADE)
 
     class Meta:

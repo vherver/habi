@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from property import urls as property_urls
+from property.api_v1 import urls as property_urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/v1/property/', property_urls)
+    path("admin/", admin.site.urls),
+    path("api/v1/property/", property_urls)
 ]
