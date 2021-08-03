@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import django_filters.rest_framework
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,8 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "rest_framework",
-    "property",
+    'django_filters',
+    'rest_framework',
+    'property',
 ]
 
 MIDDLEWARE = [
@@ -77,13 +79,17 @@ WSGI_APPLICATION = "habi.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    },
+    "data": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("JUSTO_DATABASE_NAME", "saleorma_db"),
-        "HOST": os.environ.get("JUSTO_DATABASE_HOST", "db"),
-        "PORT": os.environ.get("JUSTO_DATABASE_PORT", "3306"),
-        "USER": os.environ.get("JUSTO_DATABASE_USER", "root"),
-        "PASSWORD": os.environ.get("JUSTO_DATABASE_PASS", "12345"),
+        "NAME": os.environ.get("DATABASE_NAME", "habi_db"),
+        "HOST": os.environ.get("DATABASE_HOST", "3.130.126.210"),
+        "PORT": os.environ.get("DATABASE_PORT", "3309"),
+        "USER": os.environ.get("DATABASE_USER", "pruebas"),
+        "PASSWORD": os.environ.get("JUSTO_DATABASE_PASS", "VGbt3Day5R"),
         "OPTIONS": {"charset": "utf8mb4"},
     }
 }
@@ -117,3 +123,8 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
