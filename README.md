@@ -13,7 +13,15 @@ The entpoints will be created that will make up the API that will allow users to
 
 [Related documentation](https://www.google.com)
 
+##Strategy to solve the problem:
 
+Since there is a restriction that the records in the database should not be modified, it is decided to use two databases, one that provides the information provided by Habi and the other for the Django configuration.
+
+The models.py file was populated using the command 
+
+```
+python manage.py inspectdb
+```
 
 ## Installation
 
