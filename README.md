@@ -11,7 +11,6 @@ As the first steps for the development is to adapt the project in Django to be a
 
 The entpoints will be created that will make up the API that will allow users to obtain the information from the database
 
-[Related documentation](https://www.google.com)
 
 ##Strategy to solve the problem:
 
@@ -31,3 +30,16 @@ The project will be wrapped in docker so it will be necessary to have docker ins
 docker-compose build
 docker-compose up
 ```
+
+## Endpoints
+
+api/v1/property/
+
+The active filters for the endpoint: 
+- city
+- price
+- min_price
+- max_price
+- min_year
+- max_year
+- status
