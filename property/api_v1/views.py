@@ -8,7 +8,6 @@ from property.serializers.property_serializers import PropertySerializer
 from django_filters import rest_framework as filters
 
 
-
 class PropertyListView(generics.ListAPIView):
     serializer_class = PropertySerializer
     pagination_class = paginators.Paginator

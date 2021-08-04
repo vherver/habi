@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'django_filters',
-    'rest_framework',
-    'property',
+    "django_filters",
+    "rest_framework",
+    "property",
 ]
 
 MIDDLEWARE = [
@@ -79,9 +79,9 @@ WSGI_APPLICATION = "habi.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
     },
     "data": {
         "ENGINE": "django.db.backends.mysql",
@@ -91,7 +91,7 @@ DATABASES = {
         "USER": os.environ.get("DATABASE_USER", "pruebas"),
         "PASSWORD": os.environ.get("JUSTO_DATABASE_PASS", "VGbt3Day5R"),
         "OPTIONS": {"charset": "utf8mb4"},
-    }
+    },
 }
 
 # Password validation
@@ -126,5 +126,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend"
+    ]
 }

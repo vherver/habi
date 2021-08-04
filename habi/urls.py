@@ -20,5 +20,5 @@ from property.api_v1 import urls as property_urls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/v1/property/", include(property_urls))
+    path("api/v1/property/", include(property_urls)),
 ]

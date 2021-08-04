@@ -12,7 +12,7 @@ class Property(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'property'
+        db_table = "property"
         verbose_name = "Property"
         verbose_name_plural = "Properties"
 
@@ -35,7 +35,7 @@ class Status(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'status'
+        db_table = "status"
         verbose_name = "Status"
         verbose_name_plural = "Status"
 
@@ -52,6 +52,6 @@ class StatusHistory(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'status_history'
+        db_table = "status_history"
         verbose_name = "StatusHistory"
         verbose_name_plural = "StatusHistory"
