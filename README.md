@@ -43,3 +43,6 @@ The active filters for the endpoint:
 - min_year
 - max_year
 - status
+
+![image](https://user-images.githubusercontent.com/34664404/128111141-969f44dc-e493-420e-aafc-81ea91801515.png)
+
