@@ -19,6 +19,13 @@ class Property(models.Model):
     def __str__(self):
         return f"Property-{self.pk}"
 
+    @property
+    def get_status_name(self):
+        last_status = self.statushistory_set.last()
+        if last_status:
+            return self.statushistory_set.last().status.name
+        return ""
+
 
 class Status(models.Model):
     """Model used to represent property status"""
