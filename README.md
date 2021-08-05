@@ -1,4 +1,3 @@
-# Habi Backend test
 ## Stack used in the project
 - Python 3.8
 - Django
